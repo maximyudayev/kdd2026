@@ -1,0 +1,8 @@
+# Optimized codec settings for LattePanda
+codec_name  : 'h264_qsv'
+pix_format  : 'nv12'
+output_options:
+    preset                : 'p7'
+    video_bitrate         : '6M'
+    tune                  : 'hq'
+    filter_complex        : "[0:v]hwupload_cuda[1];[1]scale_cuda=1920:1080"
