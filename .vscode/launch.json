@@ -9,10 +9,10 @@
       "type": "debugpy",
       "request": "launch",
       "cwd": "${workspaceFolder}",
-      "program": "examples/main.py",
+      "program": "main.py",
       "args": [
         "-e", "project=Revalexo", "type=Transparent", "trial=0",
-        "-f", "cameras.yml",
+        "-f", "laptop.yml",
         "-o", "data"
       ],
       "env": {

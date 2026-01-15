@@ -1,5 +1,5 @@
 @echo on
-call ..\.venv\Scripts\activate
+call .venv\Scripts\activate
 set PYTHONPATH="%cd%"
 
 set "FILE=trial_auto_id.txt"
