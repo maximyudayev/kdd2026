@@ -1,8 +1,9 @@
 # Optimized codec settings for LattePanda
 codec_name  : 'h264_qsv'
 pix_format  : 'nv12'
+input_options: {}
 output_options:
-    preset                : 'p7'
-    video_bitrate         : '6M'
-    tune                  : 'hq'
-    filter_complex        : "[0:v]hwupload_cuda[1];[1]scale_cuda=1920:1080"
+  preset        : 'veryslow' # slower or slow or medium or fast
+  "profile:v"   : 'high' # main
+  scenario      : 'livestreaming' # cameracapture but preset and profile should also be lowered
+  # "b:v" : '6M' # 3M
