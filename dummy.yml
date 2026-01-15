@@ -29,12 +29,13 @@
 host_ip : "192.168.0.146"
 is_master_broker: False
 
-remote_subscriber_ips: []
+remote_subscriber_ips:
+  - "192.168.0.190"
 remote_publisher_ips: []
 connections: []
 
-is_remote_kill: False
-remote_kill_ip: null
+is_remote_kill: True
+remote_kill_ip: "192.168.0.190"
 
 
 logging_spec:
