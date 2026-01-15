@@ -74,9 +74,9 @@ pipeline_specs:
           sampling_rate_hz: 100
           connection_type: "BLE"  # BLE or I2C
           device_mapping:  # for BLE connection type
-            torso       : "5C:3E:2C:04:28:85"
+            torso       : "B2:C9:23:6B:E0:C6"
             thigh_right : "AC:FB:DC:C8:F1:16"
-            thigh_left  : "CF:16:02:45:A6:3B"
+            thigh_left  : "5C:3E:2C:04:28:85"
             shank_right : "27:6D:73:51:55:D9"
             shank_left  : "45:7B:E2:8D:B1:F6"
           service_uuid: "19b10000-0000-537e-4f6c-d104768a1214"
@@ -106,7 +106,7 @@ pipeline_specs:
           is_baro   : False
           is_hum    : False
         motors:
-          is_emulate_can: True  # creates a virtual CAN bus for testing.
+          is_emulate_can: False  # creates a virtual CAN bus for testing.
           sampling_rate_hz: 60
           device_mapping:
             knee_right:

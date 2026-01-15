@@ -12,7 +12,7 @@
       "program": "main.py",
       "args": [
         "-e", "project=Revalexo", "type=Transparent", "trial=0",
-        "-f", "laptop.yml",
+        "-f", "test.yml",
         "-o", "data"
       ],
       "env": {

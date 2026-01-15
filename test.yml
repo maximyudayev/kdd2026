@@ -26,35 +26,19 @@
 # ############
 
 
-host_ip : "192.168.0.103"
+host_ip : "192.168.0.190"
 is_master_broker: True
 
 remote_subscriber_ips: []
 remote_publisher_ips:
-  - "192.168.0.100"
-  - "192.168.0.101"
-  - "192.168.0.102"
+  - "192.168.0.146"
 connections:
-  - ssh_username: "a"
-    ssh_host_ip: "192.168.0.100"
+  - ssh_username: "Owner"
+    ssh_host_ip: "192.168.0.146"
     platform: "Windows"
-    config_filepath: "./cameras.yml"
-    project_dir: "C:\\Users\\a\\Desktop\\KDD2026\\kdd2026"
+    config_filepath: "./dummy.yml"
+    project_dir: "D:\\kdd2026"
     output_dir: ".\\data"
-
-  - ssh_username: "lattepanda"
-    ssh_host_ip: "192.168.0.101"
-    platform: "Linux"
-    config_filepath: "./wearable.yml"
-    project_dir: "~/Documents/kdd2026"
-    output_dir: "./data"
-
-  - ssh_username: "revalexo"
-    ssh_host_ip: "192.168.0.102"
-    platform: "Linux"
-    config_filepath: "./exo.yml"
-    project_dir: "~/Documents/Revalexo"
-    output_dir: "./data"
 
 is_remote_kill: False
 remote_kill_ip: null
@@ -77,34 +61,7 @@ video_codec_config_filepath : null
 audio_codec_config_filepath : null
 
 
-producer_specs:
-  - package: "mvn"
-    class: "MvnAnalyzeProducer"
-    settings:
-      mvn_setup           : "full_body"
-      sampling_rate_hz    : 60
-      is_euler            : False
-      is_quaternion       : True
-      is_joint_angles     : True
-      is_linear_segments  : True
-      is_angular_segments : True
-      is_motion_trackers  : True
-      is_com              : True
-      is_time_code        : True
-
-  - package: "cometa"
-    class: "CometaProducer"
-    settings:
-      device_mapping:
-        gluteus_medius_left         : "1" # left upper glute
-        rectus_femoris_left         : "2" # left quad
-        semitendius_left            : "3" # left hamstring
-        medial_gastrocnemius_left   : "4" # left inner calf
-        gluteus_medius_right        : "5" # right upper glute
-        rectus_femoris_right        : "6" # right quad
-        semitendius_right           : "7" # right hamstring
-        medial_gastrocnemius_right  : "8" # right inner calf
-      sampling_rate_hz: 2000
+producer_specs: []
 
 
 consumer_specs: []
