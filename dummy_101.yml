@@ -26,7 +26,7 @@
 # ############
 
 
-host_ip : "10.220.25.100"
+host_ip : "10.220.25.101"
 is_master_broker: False
 
 remote_subscriber_ips:
@@ -39,11 +39,11 @@ remote_kill_ip: "10.220.25.103"
 
 
 logging_spec:
-  stream_period_s     : 1
+  stream_period_s     : 10
   
   stream_hdf5         : True
   stream_csv          : False
-  stream_video        : True
+  stream_video        : False
   stream_audio        : False
 
   dump_csv            : False
@@ -51,23 +51,16 @@ logging_spec:
   dump_video          : False
   dump_audio          : False
 
-video_codec_config_filepath : "./video_codec_terminal.yml"
+video_codec_config_filepath : null
 audio_codec_config_filepath : null
 
 
 producer_specs:
-  - package: "basler"
-    class: "CameraProducer"
+  - package: "dummy"
+    class: "DummyProducer"
     settings:
-      camera_mapping: # map camera names (usable as device names in the HDF5 file) to capture device indices.
-        n1: "40478064"
-        n2: "40549960"
-        n3: "40549975"
-        n4: "40549976"
-      fps: 30
-      resolution:
-        - 1440
-        - 2560
+      sampling_rate_hz: 1
+      payload_num_bytes: 100
 
 
 consumer_specs: []

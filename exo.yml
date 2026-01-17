@@ -26,16 +26,16 @@
 # ############
 
 
-host_ip : "192.168.0.102"
+host_ip : "10.220.25.102"
 is_master_broker: False
 
 remote_subscriber_ips:
-  - "192.168.0.103"
+  - "10.220.25.103"
 remote_publisher_ips: []
 connections: []
 
 is_remote_kill: True
-remote_kill_ip: "192.168.0.103"
+remote_kill_ip: "10.220.25.103"
 
 
 logging_spec:

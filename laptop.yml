@@ -26,31 +26,31 @@
 # ############
 
 
-host_ip : "192.168.0.103"
+host_ip : "10.220.25.103"
 is_master_broker: True
 
 remote_subscriber_ips: []
 remote_publisher_ips:
-  - "192.168.0.100"
-  - "192.168.0.101"
-  - "192.168.0.102"
+  - "10.220.25.100"
+  - "10.220.25.101"
+  - "10.220.25.102"
 connections:
   - ssh_username: "a"
-    ssh_host_ip: "192.168.0.100"
+    ssh_host_ip: "10.220.25.100"
     platform: "Windows"
     config_filepath: "./cameras.yml"
     project_dir: "C:\\Users\\a\\Desktop\\KDD2026\\kdd2026"
     output_dir: ".\\data"
 
   - ssh_username: "lattepanda"
-    ssh_host_ip: "192.168.0.101"
+    ssh_host_ip: "10.220.25.101"
     platform: "Linux"
     config_filepath: "./wearable.yml"
     project_dir: "~/Documents/kdd2026"
     output_dir: "./data"
 
   - ssh_username: "revalexo"
-    ssh_host_ip: "192.168.0.102"
+    ssh_host_ip: "10.220.25.102"
     platform: "Linux"
     config_filepath: "./exo.yml"
     project_dir: "~/Documents/Revalexo"

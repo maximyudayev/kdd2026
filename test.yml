@@ -26,17 +26,41 @@
 # ############
 
 
-host_ip : "192.168.0.190"
+host_ip : "10.220.25.103"
 is_master_broker: True
 
 remote_subscriber_ips: []
 remote_publisher_ips:
-  - "192.168.0.146"
+  - "10.220.25.100"
+  - "10.220.25.101"
+  - "10.220.25.102"
+  - "10.220.25.104"
 connections:
-  - ssh_username: "Owner"
-    ssh_host_ip: "192.168.0.146"
+  - ssh_username: "a"
+    ssh_host_ip: "10.220.25.100"
     platform: "Windows"
-    config_filepath: "./dummy.yml"
+    config_filepath: "./dummy_100.yml"
+    project_dir: "C:\\Users\\a\\Desktop\\KDD2026\\kdd2026"
+    output_dir: ".\\data"
+
+  - ssh_username: "lattepanda"
+    ssh_host_ip: "10.220.25.101"
+    platform: "Linux"
+    config_filepath: "./dummy_101.yml"
+    project_dir: "~/Documents/kdd2026"
+    output_dir: "./data"
+
+  - ssh_username: "revalexo"
+    ssh_host_ip: "10.220.25.102"
+    platform: "Linux"
+    config_filepath: "./dummy_102.yml"
+    project_dir: "~/Documents/Revalexo"
+    output_dir: "./data"
+
+  - ssh_username: "Owner"
+    ssh_host_ip: "10.220.25.104"
+    platform: "Windows"
+    config_filepath: "./dummy_104.yml"
     project_dir: "D:\\kdd2026"
     output_dir: ".\\data"
 
